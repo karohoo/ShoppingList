@@ -29,7 +29,7 @@ xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
     		<td th:text="${item.quantity}"></td>
     		<td th:text="${item.unit}"></td>
  			<td th:text="${item.note}"></td>  
- 			<td th:text ="${item.store.name}"> <!-- <a th:text="${item.store.name}" th:href="@{/storelist/{id}(id=${item.store.storeId})}"></a>--> </td>
+ 			<td th:text="${item.store.name}"></td>
  			<td sec:authorize="hasAuthority('ADMIN')"> <a th:href="@{/delete/{id}(id=${item.id})}" class="btn btn-danger">Delete</a></td>		
 			<td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/edititem/{id}(id=${item.id})}" class="btn btn-primary">Edit</a></td>			
     	</tr>

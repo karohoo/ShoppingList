@@ -35,6 +35,17 @@ public class ShoppingController {
 		return "shoppinglist";
 	}
 	
+	 /*
+	  * Not working
+	  * 
+	@RequestMapping(value="/storelist/{id}", method=RequestMethod.GET)
+	public String storeList(@PathVariable("id") Long id, Model model) {
+		model.addAttribute("items", irepository.findById(id));
+		return "storelist";
+	}
+	
+	*/
+	
 	@RequestMapping(value="/items", method=RequestMethod.GET)
 	public @ResponseBody List<Item> getItemsRest() {
 		return (List<Item>) irepository.findAll();
