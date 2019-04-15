@@ -28,7 +28,6 @@ public class ShoppingListApplication {
 		return (args) -> {
 			log.info("saving shopping list");
 			srepository.save(new Store("Grocery store"));
-			srepository.save(new Store("Clothing store"));
 			srepository.save(new Store("Sport store"));
 			srepository.save(new Store("Pharmacy"));
 			irepository.save(new Item("Softshell gloves", 1, "pair", "Size of a 4-year-old", srepository.findByName("Sport store").get(0)));
