@@ -35,10 +35,8 @@ public class ShoppingListApplication {
 			irepository.save(new Item("Coffee", 2, "bags", "Dark roast", srepository.findByName("Grocery store").get(0)));
 			irepository.save(new Item("Yoghurt", 1, "litre", "No added sugar", srepository.findByName("Grocery store").get(0)));
 			irepository.save(new Item("Skin cream", 2, "cans", "Novalan or Aqualan", srepository.findByName("Pharmacy").get(0)));
-			urepository.save(new User("user", "$2a$04$zLnuuuCimyp8lKg/iLQsPeHOvn5SFG.XfYPlcE3zjXpKDm14gEZNW",
-					"user@user.com", "USER"));
-			urepository.save(new User("admin", "$2a$04$nnSBGiNk6ugfSX647Tw5ruvtx1m9RgcNpNtVjo25q.kjKhYmv/Jgm",
-					"admin@admin.com", "ADMIN"));
+			urepository.save(new User("user", "$2a$04$zLnuuuCimyp8lKg/iLQsPeHOvn5SFG.XfYPlcE3zjXpKDm14gEZNW", "USER"));
+			urepository.save(new User("admin", "$2a$04$nnSBGiNk6ugfSX647Tw5ruvtx1m9RgcNpNtVjo25q.kjKhYmv/Jgm", "ADMIN"));
 			log.info("fetch all items");
 			for (Item item : irepository.findAll()) {
 				log.info(item.toString());
