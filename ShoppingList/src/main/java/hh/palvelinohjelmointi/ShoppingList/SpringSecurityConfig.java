@@ -11,7 +11,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import hh.palvelinohjelmointi.ShoppingList.web.UserDetailServiceImpl;
-import hh.palvelinohjelmointi.ShoppingList.domain.*;
 
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -19,8 +18,6 @@ import hh.palvelinohjelmointi.ShoppingList.domain.*;
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserDetailServiceImpl userDetailsService;
-	
-	private UserRepository urepository;
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
